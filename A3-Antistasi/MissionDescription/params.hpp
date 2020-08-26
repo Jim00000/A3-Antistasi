@@ -12,14 +12,14 @@ class Params
           title = "Game Mode - Do NOT change this mid mission";
           values[] = {1,2,3,4};
           texts[] = {"Reb vs Gov vs Inv","Reb vs Gov & Inv","Reb vs Gov","Reb vs Inv"};
-          default = 1;
+          default = 3;
      };
      class autoSave
      {
           title = "Enable Autosave (every X minutes)";
           values[] = {1,0};
           texts[] = {"Yes","No"};
-          default = 1;
+          default = 0;
      };
      class autoSaveInterval
      {
@@ -60,7 +60,7 @@ class Params
           title = "Allow PvP Slots";
           values[] = {1,0};
           texts[] = {"Yes","No"};
-          default = 1;
+          default = 0;
      };
      class pMarkers
      {
@@ -74,24 +74,24 @@ class Params
           title = "Mission Difficulty";
           values[] = {1,2,3};
           texts[] = {"Easy","Normal","Hard"};
-          default = 2;
+          default = 1;
      };
      class unlockItem
      {
           title = "Number of the same item required to unlock";
-          values[] = {15,25,40};
-          default = 25;
+          values[] = {1,5,15,25,40};
+          default = 5;
      };
      class memberOnlyMagLimit
      {
           title = "Number of magazines needed for guests to be able to use them";
-          values[] = {10,20,30,40,50,60};
-          default = 40;
+          values[] = {1,5,10,20,30,40,50,60};
+          default = 20;
      };
      class civTraffic
      {
           title = "Rate of Civ Traffic";
-          values[] = {0,1,2,4,};
+          values[] = {0,1,2,4};
           texts[] = {"None","Low","Medium","High"};
           default = 2;
      };
@@ -149,21 +149,21 @@ class Params
           title = "Do Unlocked Weapons Automatically Unlock Their Standard Magazine?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class allowGuidedLaunchers
      {
           title = "Should Guided Launchers become unlocked?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class allowUnlockedExplosives
      {
           title = "Should Explosives become unlocked?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class startWithLongRangeRadio
      {
@@ -191,49 +191,49 @@ class Params
           title = "Allow Items and Vehicles from Karts DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class Mark
      {
           title = "Allow Items and Vehicles from Marksman DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class Heli
      {
           title = "Allow Items and Vehicles from Heli DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class Expansion
      {
           title = "Allow Items and Vehicles from Apex DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class Jets
      {
           title = "Allow Items and Vehicles from Jets DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class Orange
      {
           title = "Allow Items and Vehicles from Laws of War DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class Tanks
      {
           title = "Allow Items and Vehicles from Tanks DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class GlobMob
      {
@@ -254,7 +254,7 @@ class Params
           title = "Allow ADR-97 DLC?";
           values[] = {1,0};
           texts[] =  {"Yes","No"};
-          default = 0;
+          default = 1;
      };
      class Spacer0
      {
