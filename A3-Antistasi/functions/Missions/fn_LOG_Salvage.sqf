@@ -54,7 +54,7 @@ missionsX pushBack ["LOG","CREATED"]; publicVariable "missionsX";
 [] remoteExec ["A3A_fnc_SalvageRope", 0, true];
 
 [3, format ["Mission created, waiting for players to get near"], _filename] call A3A_fnc_log;
-waitUntil {sleep 1;(dateToNumber date > _dateLimitNum) or ((spawner getVariable _markerX != 2) and !(sidesX getVariable [_markerX,sideUnknown] == teamPlayer))};
+waitUntil {sleep 1; ((spawner getVariable _markerX != 2) and !(sidesX getVariable [_markerX,sideUnknown] == teamPlayer))};
 [3, format ["players in spawning range, starting spawning"], _filename] call A3A_fnc_log;
 
 
@@ -108,13 +108,9 @@ _vehCrewGroup addVehicle _veh;
 //Disable simulation if we *really* want to
 
 [3, format ["Waiting for salvage mission end"], _filename] call A3A_fnc_log;
-waitUntil {sleep 1; (dateToNumber date > _dateLimitNum) or ((_box distance2D posHQ) < 100)};
+waitUntil {sleep 1; ((_box distance2D posHQ) < 100)};
 
 private _timeout = false;
-if (dateToNumber date > _dateLimitNum) then {
-	_timeout = true;
-	waitUntil {sleep 1; ((_box distance2D posHQ) < 100) || allPlayers inAreaArray [getPos _box, 50, 50] isEqualTo [] || isNull _box};
-};
 
 private _bonus = if (_difficultX) then {2} else {1};
 
