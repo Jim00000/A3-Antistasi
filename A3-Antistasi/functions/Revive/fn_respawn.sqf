@@ -31,11 +31,6 @@ _unit setVariable ["incapacitated",false];
 if (rating _unit < 0) then {_unit addRating (rating _unit * -1)};
 _nul = [0,-1,getPos _unit] remoteExec ["A3A_fnc_citySupportChange",2];
 
-_hr = round ((server getVariable "hr") * 0.1);
-_resourcesFIA = round ((server getVariable "resourcesFIA") * 0.05);
-
-[- _hr, - _resourcesFIA] remoteExec ["A3A_fnc_resourcesFIA",2];
-
 {
 //_x hideObject true;
 if ((_x != vehicle _x) and (driver vehicle _x == _x)) then
