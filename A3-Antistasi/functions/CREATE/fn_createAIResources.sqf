@@ -162,17 +162,6 @@ if (not(_markerX in destroyedSites)) then
 			_civs pushBack _civ;
 			_civ setVariable ["markerX",_markerX,true];
 			sleep 0.5;
-			_civ addEventHandler ["Killed",
-				{
-					if (({alive _x} count (units group (_this select 0))) == 0) then
-					{
-						_markerX = (_this select 0) getVariable "markerX";
-						_nameX = [_markerX] call A3A_fnc_localizar;
-						destroyedSites pushBackUnique _markerX;
-						publicVariable "destroyedSites";
-						["TaskFailed", ["", format ["%1 Destroyed",_nameX]]] remoteExec ["BIS_fnc_showNotification",[teamPlayer,civilian]];
-					};
-				}];
 		};
 		//_nul = [_markerX,_civs] spawn destroyCheck;
 		_nul = [leader _groupX, _markerX, "SAFE", "SPAWNED","NOFOLLOW", "NOSHARE","DORELAX","NOVEH2"] execVM "scripts\UPSMON.sqf";//TODO need delete UPSMON link
