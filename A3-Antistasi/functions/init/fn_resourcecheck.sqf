@@ -94,7 +94,7 @@ while {true} do
 		[] call A3A_fnc_tierCheck;
 		};
 	} forEach citiesX;
-	if (_popCSAT > (_popTotal / 3)) then {["destroyedSites",false,true] remoteExec ["BIS_fnc_endMission"]};
+	
 	if ((_popFIA > _popAAF) and ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count airportsX == count airportsX)) then {["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission",0]};
 	/*
 	{
