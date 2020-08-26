@@ -85,33 +85,6 @@ sleep 5;
 
 {_x allowDamage true} forEach _POWS;
 
-waitUntil {sleep 1; ({alive _x} count _POWs == 0) or ({(alive _x) and (_x distance getMarkerPos respawnTeamPlayer < 50)} count _POWs > 0) or (dateToNumber date > _dateLimitNum)};
-
-if (dateToNumber date > _dateLimitNum) then
-	{
-	if (spawner getVariable _markerX == 2) then
-		{
-		{
-		if (group _x == _grpPOW) then
-			{
-			_x setDamage 1;
-			};
-		} forEach _POWS;
-		}
-	else
-		{
-		{
-		if (group _x == _grpPOW) then
-			{
-			[_x,false] remoteExec ["setCaptive",0,_x];
-			_x setCaptive false;
-			_x enableAI "MOVE";
-			_x doMove _positionX;
-			};
-		} forEach _POWS;
-		};
-	};
-
 waitUntil {sleep 1; ({alive _x} count _POWs == 0) or ({(alive _x) and (_x distance getMarkerPos respawnTeamPlayer < 50)} count _POWs > 0)};
 
 _bonus = if (_difficultX) then {2} else {1};
