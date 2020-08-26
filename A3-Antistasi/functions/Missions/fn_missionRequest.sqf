@@ -56,7 +56,7 @@ if (_typeX == "AS") then
 	else
 		{
 		_siteX = selectRandom _potentials;
-		if (_siteX in airportsX) then {[[_siteX],"A3A_fnc_AS_Official"] remoteExec ["A3A_fnc_scheduler",2]} else {if (_siteX in citiesX) then {[[_siteX],"A3A_fnc_AS_Traitor"] remoteExec ["A3A_fnc_scheduler",2]} else {[[_siteX],"A3A_fnc_AS_SpecOP"] remoteExec ["A3A_fnc_scheduler",2]}};
+		if (_siteX in airportsX) then {[[_siteX],"A3A_fnc_AS_Official"] remoteExec ["A3A_fnc_scheduler",2]} else {if (_siteX in citiesX) then {[[_siteX],"A3A_fnc_AS_SpecOP"] remoteExec ["A3A_fnc_scheduler",2]};};
 		};
 	};
 if (_typeX == "CON") then
