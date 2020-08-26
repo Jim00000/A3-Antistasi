@@ -42,7 +42,7 @@ _nul = [leader _grp, _markerX, "SAFE", "SPAWNED", "NOVEH", "NOFOLLOW"] execVM "s
 
 {_nul = [_x,""] call A3A_fnc_NATOinit; _x allowFleeing 0} forEach units _grp;
 
-waitUntil {sleep 1; (dateToNumber date > _dateLimitNum) or (not alive _official)};
+waitUntil {sleep 1; (not alive _official)};
 
 if (not alive _official) then
 	{
