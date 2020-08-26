@@ -50,7 +50,7 @@ while {true} do
         [3600, Occupants] call A3A_fnc_timingCA;
         if (!bigAttackInProgress) then
         {
-            [Occupants] spawn A3A_fnc_rebelAttack;
+            //[Occupants] spawn A3A_fnc_rebelAttack;
         };
     }
     else
@@ -70,7 +70,7 @@ while {true} do
             [3600, Invaders] call A3A_fnc_timingCA;
             if (!bigAttackInProgress) then
             {
-                [Invaders] spawn A3A_fnc_rebelAttack;
+                //[Invaders] spawn A3A_fnc_rebelAttack;
             };
         }
         else
