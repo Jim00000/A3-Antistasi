@@ -13,4 +13,5 @@
 - No "destroyed city" event as well as "destroyed Altis" mission failed condition
 - No mission requests from Petros
 - No MCC Mod check
+- No respawn penalty while Player dies
 - Extra parameters configuarion
