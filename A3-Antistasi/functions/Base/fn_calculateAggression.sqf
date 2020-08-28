@@ -24,6 +24,9 @@ private _newInvadersValue = 0;
     _newInvadersValue = _newInvadersValue + (_x select 0);
 } forEach aggressionStackInvaders;
 
+_newOccupantsValue = _newOccupantsValue * 0.5;
+_newInvadersValue = _newInvadersValue * 0.5;
+
 //Limit them to 0 - 100
 _newOccupantsValue = round ((_newOccupantsValue min 100) max 0);
 _newInvadersValue = round ((_newInvadersValue min 100) max 0);
