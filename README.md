@@ -9,9 +9,12 @@
 </div>
 
 ## Modifications
-- No attack from Government/Invader 
+- No active attack from Government/Invader 
 - No "destroyed city" event as well as "destroyed Altis" mission failed condition
 - No mission requests from Petros
 - No MCC Mod check
 - No respawn penalty while Player dies
 - Extra parameters configuarion
+- Basic man power & money income
+- Less aggression increase 
+- Slow growth curve of war level
