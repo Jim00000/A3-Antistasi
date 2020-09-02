@@ -68,6 +68,7 @@ if (count _positionTel > 0) then
  		if (!_esHC) then
  			{
  			_timePassed = 0;
+			_distanceX = 1;
  			while {_timePassed < _distanceX} do
  				{
  				cutText [format ["Fast traveling, travel time: %1s , please wait", (_distanceX - _timePassed)],"BLACK",0.0001];
