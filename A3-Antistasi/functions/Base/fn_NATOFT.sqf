@@ -54,13 +54,12 @@ if (count _positionTel > 0) then
 		_distanceX = round (((position player) distance _positionX)/200);
 		disableUserInput true;
 		cutText ["Fast traveling, please wait","BLACK",2];
-		sleep 2;
+		sleep 1;
 		(vehicle player) setPos _positionX;
 		player allowDamage false;
-		sleep _distanceX;
 		disableUserInput false;
 		cutText ["You arrived to destination","BLACK IN",3];
-		sleep 5;
+		sleep 1;
 		player allowDamage true;
 		}
 	else
