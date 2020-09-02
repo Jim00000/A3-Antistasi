@@ -18,3 +18,7 @@
 - Basic man power & money income
 - Less aggression increase 
 - Slow growth curve of war level
+- Quick Fast Travel
+
+## Known issues
+- "Assassinate the SpecOp" mission is broken
