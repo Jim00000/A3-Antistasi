@@ -66,6 +66,8 @@ if (side group player == teamPlayer) then
 		};
 	} forEach (units group player);
 
+	// Disable fatigue
+	player enableFatigue false;
 
 	// don't reinit revive because damage handlers are respawn-persistent
 	//if (!hasACEMedical) then {[_newUnit] call A3A_fnc_initRevive};
