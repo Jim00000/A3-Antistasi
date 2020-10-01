@@ -1,7 +1,5 @@
 if !([player] call A3A_fnc_isMember) exitWith {["AI Recruitment", "Only Server Members can recruit AI units"] call A3A_fnc_customHint;};
 
-if (recruitCooldown > time) exitWith {["AI Recruitment", format ["You need to wait %1 seconds to be able to recruit units again",round (recruitCooldown - time)]] call A3A_fnc_customHint;};
-
 if (player != player getVariable ["owner",player]) exitWith {["AI Recruitment", "You cannot buy units while you are controlling AI"] call A3A_fnc_customHint;};
 
 if ([player,300] call A3A_fnc_enemyNearCheck) exitWith {["AI Recruitment", "You cannot Recruit Units with enemies nearby"] call A3A_fnc_customHint;};
