@@ -183,7 +183,6 @@ if (_costs > server getVariable "resourcesFIA") exitWith {};
 
 createDialog "veh_query";
 
-sleep 1;
 disableSerialization;
 
 private _display = findDisplay 100;
