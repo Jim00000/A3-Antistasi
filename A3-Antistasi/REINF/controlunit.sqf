@@ -53,7 +53,7 @@ _timeX = 60;
 
 _unit addAction ["Return Control to AI",{selectPlayer leader (group (_this select 0))}];
 
-waitUntil {sleep 1; ["Control Unit", format ["Time to return control to AI: %1", _timeX]] call A3A_fnc_customHint; _timeX = _timeX - 1; (_timeX == -1) or (isPlayer (leader group player))};
+waitUntil {sleep 1; ["Control Unit", format ["Time to return control to AI: %1", _timeX]] call A3A_fnc_customHint; (_timeX == -1) or (isPlayer (leader group player))};
 
 removeAllActions _unit;
 selectPlayer (_unit getVariable ["owner",_unit]);
