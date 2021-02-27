@@ -124,7 +124,7 @@ private ["_nameX", "_roads", "_numCiv", "_roadsProv", "_roadcon", "_dmrk", "_inf
 
 "(getText (_x >> ""type"") in [""NameCityCapital"", ""NameCity"", ""NameVillage"", ""CityCenter""]) &&
 !(getText (_x >> ""Name"") isEqualTo """") &&
-!((configName _x) in [""Lakatoro01"", ""Galili01"",""Sosovu01"", ""Ipota01"", ""Malden_C_Airport"", ""FobNauzad"", ""FobObeh"", ""22"", ""23"", ""toipela"", ""hirvela""])"
+!((configName _x) in [""Lakatoro01"", ""Galili01"",""Sosovu01"", ""Ipota01"", ""Malden_C_Airport"", ""FobNauzad"", ""FobObeh"", ""22"", ""23"", ""toipela"", ""hirvela"", ""Kuusela"", ""Niemela""])"
 configClasses (configfile >> "CfgWorlds" >> worldName >> "Names") apply {
 
 	_nameX = configName _x;
@@ -399,7 +399,14 @@ if (count _posBank > 0) then {
 	};
 };
 
-blackListDest = (markersX - controlsX - ["Synd_HQ"] - citiesX) select {!((position ([getMarkerPos _x] call A3A_fnc_findNearestGoodRoad)) inArea _x)};
+// Make list of markers that don't have a proper road nearby
+blackListDest = (markersX - controlsX - ["Synd_HQ"] - citiesX) select {
+	private _nearRoads = (getMarkerPos _x) nearRoads (([_x] call A3A_fnc_sizeMarker) * 1.5);
+//	_nearRoads = _nearRoads inAreaArray _x;
+	private _badSurfaces = ["#GdtForest", "#GdtRock", "#GdtGrassTall"];
+	private _idx = _nearRoads findIf { !(surfaceType (position _x) in _badSurfaces) && { count roadsConnectedTo _x != 0 } };
+	if (_idx == -1) then {true} else {false};
+};
 
 publicVariable "blackListDest";
 publicVariable "markersX";
